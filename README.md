@@ -1,5 +1,13 @@
 # GoogleAfricePhaseProject
-it is google africa 2020 scholarship phase project 
+It is google africa 2020 scholarship phase project .
+Technologies used is :
+1 - KOIN DI
+2 - Coroutines
+3 - Navigation Components 
+4 - MVVM
+5 - LiveData
+6 - Data binding
+7 - Binding Adapter's
 
 ![alt text](https://user-images.githubusercontent.com/33866122/91750088-ca64ae00-ebc2-11ea-85ec-75721ab2d27a.jpeg)
 
