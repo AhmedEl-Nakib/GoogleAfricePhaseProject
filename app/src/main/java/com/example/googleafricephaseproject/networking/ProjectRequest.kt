@@ -14,7 +14,7 @@ interface ProjectRequest {
     suspend fun submitProject(@Field("entry.1824927963") email:String,
     @Field("entry.1877115667") fName:String,
     @Field("entry.2006916086") lName:String,
-    @Field("entry.284483984") linkToProject:String): Response<ResponseBody>
+    @Field("entry.284483984") linkToProject:String): Response<Void>
 
 
 }
