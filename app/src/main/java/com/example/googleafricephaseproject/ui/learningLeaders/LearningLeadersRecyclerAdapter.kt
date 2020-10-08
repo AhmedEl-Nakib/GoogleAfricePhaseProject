@@ -26,6 +26,9 @@ class LearningLeadersRecyclerAdapter(private var dataList: LiveData<List<Learnin
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(dataList.value!![position] )
+        holder.itemView.setOnClickListener {
+            Toast.makeText(it.rootView.context,"Success",Toast.LENGTH_SHORT).show()
+        }
     }
 
 
