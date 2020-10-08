@@ -19,6 +19,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            app:setLearningLeadersData="@{VM.learningLeadersList}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:listitem="@layout/learning_leaders_row"
             android:id="@+id/learningLeadersRecyclerViewId" />

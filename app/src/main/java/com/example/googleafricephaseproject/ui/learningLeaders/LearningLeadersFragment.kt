@@ -24,12 +24,12 @@ class LearningLeadersFragment : Fragment() {
         binding.vm = viewModel
 
         viewModel.getLearningLeadersList(requireContext())
-        viewModel.learningLeadersList.observe(viewLifecycleOwner, Observer {
-            if(it.isNotEmpty()) {
-                learningLeadersList.value = it
-                binding.learningLeadersRecyclerViewId.adapter = LearningLeadersRecyclerAdapter(learningLeadersList,requireContext())
-            }
-        })
+//        viewModel.learningLeadersList.observe(viewLifecycleOwner, Observer {
+//            if(it.isNotEmpty()) {
+//                learningLeadersList.value = it
+//                binding.learningLeadersRecyclerViewId.adapter = LearningLeadersRecyclerAdapter(learningLeadersList,requireContext())
+//            }
+//        })
         return binding.root
     }
 

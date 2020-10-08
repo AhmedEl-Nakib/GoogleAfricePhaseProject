@@ -3,13 +3,14 @@ package com.example.googleafricephaseproject.ui.learningLeaders
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.RecyclerView
 import com.example.googleafricephaseproject.pojo.response.LearningLeadersResponseItem
 import com.example.googleafricephaseproject.databinding.LearningLeadersRowBinding
 
-class LearningLeadersRecyclerAdapter (private var dataList: LiveData<List<LearningLeadersResponseItem>>,
-                                      private val context: Context?) : RecyclerView.Adapter<LearningLeadersRecyclerAdapter.ViewHolder>() {
+class LearningLeadersRecyclerAdapter(private var dataList: LiveData<List<LearningLeadersResponseItem>>)
+    : RecyclerView.Adapter<LearningLeadersRecyclerAdapter.ViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -17,7 +18,10 @@ class LearningLeadersRecyclerAdapter (private var dataList: LiveData<List<Learni
     }
 
     override fun getItemCount(): Int {
-        return dataList.value!!.size
+        return if(dataList.value != null)
+            dataList.value!!.size
+        else
+            0
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
