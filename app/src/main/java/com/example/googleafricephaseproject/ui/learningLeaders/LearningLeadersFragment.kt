@@ -1,6 +1,7 @@
 package com.example.googleafricephaseproject.ui.learningLeaders
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -24,12 +25,11 @@ class LearningLeadersFragment : Fragment() {
         binding.vm = viewModel
 
         viewModel.getLearningLeadersList(requireContext())
-//        viewModel.learningLeadersList.observe(viewLifecycleOwner, Observer {
-//            if(it.isNotEmpty()) {
-//                learningLeadersList.value = it
-//                binding.learningLeadersRecyclerViewId.adapter = LearningLeadersRecyclerAdapter(learningLeadersList,requireContext())
-//            }
-//        })
+        viewModel.learningLeadersList.observe(viewLifecycleOwner, Observer {
+                Log.i("Frag",it.toString())
+                learningLeadersList.value = it
+                binding.learningLeadersRecyclerViewId.adapter = LearningLeadersRecyclerAdapter(learningLeadersList)
+        })
         return binding.root
     }
 

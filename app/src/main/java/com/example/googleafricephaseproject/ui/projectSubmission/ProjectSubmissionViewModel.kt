@@ -91,4 +91,8 @@ class ProjectSubmissionViewModel(private val serviceGeneral: ProjectRequest): Vi
         alert?.show()
     }
 
+    override fun onCleared() {
+        super.onCleared()
+    }
+
 }

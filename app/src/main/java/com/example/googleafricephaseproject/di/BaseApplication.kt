@@ -4,8 +4,10 @@ import android.app.Application
 import com.example.googleafricephaseproject.networking.ApiClient.homeLearningLeadersModule
 import com.example.googleafricephaseproject.networking.ApiClient.homeModule
 import com.example.googleafricephaseproject.networking.ApiClient.homeSkillIQLeadersModule
+import com.example.googleafricephaseproject.networking.ApiClient.networkFactory
 import com.example.googleafricephaseproject.networking.ApiClient.projectModule
 import com.example.googleafricephaseproject.networking.ApiClient.projectSubmissionModule
+import com.example.googleafricephaseproject.networking.ApiClient.repositoryModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
@@ -20,8 +22,10 @@ class BaseApplication : Application() {
                 homeLearningLeadersModule,
                 homeSkillIQLeadersModule,
                 projectModule,
-                projectSubmissionModule
-               ))
+                projectSubmissionModule,
+                repositoryModule,
+                networkFactory
+            ))
         }
     }
 }

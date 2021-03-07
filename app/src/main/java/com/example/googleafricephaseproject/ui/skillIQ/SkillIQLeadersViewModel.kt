@@ -56,4 +56,8 @@ class SkillIQLeadersViewModel(private val serviceGeneral: HomeRequests) : ViewMo
             Toast.makeText(context, e.message.toString(), Toast.LENGTH_SHORT).show()
         }
     }
+
+    override fun onCleared() {
+        super.onCleared()
+    }
 }

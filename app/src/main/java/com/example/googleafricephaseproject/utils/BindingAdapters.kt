@@ -1,4 +1,4 @@
-package com.example.googleafricephaseproject
+package com.example.googleafricephaseproject.utils
 
 import android.view.View
 import android.widget.ImageView
